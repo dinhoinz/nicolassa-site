@@ -1,11 +1,11 @@
 ---
-title: "Vai viajar? Como deixar seu gato bem em casa"
-description: "Por que o gato costuma ficar melhor em casa do que num hotel, e o que preparar antes de sair de viagem."
+title: Vai viajar? Como deixar seu gato bem em casa
+description: Por que o gato costuma ficar melhor em casa do que num hotel, e o
+  que preparar antes de sair de viagem.
 date: 2026-10-17
 image: /assets/img/cena-brincando.webp
-published: false
+published: true
 ---
-
 Gato é um animal territorial. A casa dele é onde ele sabe onde estão a comida, a água, a caixa de areia e os esconderijos. Por isso, para muitos gatos, sair de casa para um hotel ou para a casa de outra pessoa é mais estressante do que ficar alguns dias sem o tutor, desde que alguém de confiança passe para cuidar da rotina.
 
 ## Por que deixar o gato em casa
@@ -30,3 +30,4 @@ Isso não vale para todos os casos. Gatos com problemas de saúde que precisam d
 Antes da viagem, eu faço uma visita de apresentação para conhecer o seu gato, combinar a entrega da chave e anotar a rotina dele. Durante a viagem, em cada visita eu cuido da comida, da água, da caixa de areia e dou atenção no ritmo do gato. Você recebe fotos e um resumo de como ele está.
 
 > Quanto antes você combinar, melhor: feriados e férias costumam lotar rápido.
+
