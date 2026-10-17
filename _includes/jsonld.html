@@ -1,0 +1,32 @@
+{%- assign info = site.data.info -%}
+{%- capture tel -%}{%- include wa-num.html -%}{%- endcapture -%}
+{%- assign ig = info.instagram | default: "" | remove: "@" | strip -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Nicolas Sá · Cat sitter",
+  "description": {{ site.description | strip | jsonify }},
+  "url": {{ site.url | append: site.baseurl | append: "/" | jsonify }},
+  "image": {{ "/assets/img/og-image.jpg" | absolute_url | jsonify }},
+  "logo": {{ "/assets/img/logo-roxo.png" | absolute_url | jsonify }},
+  "telephone": "+55{{ tel }}",
+  "priceRange": "$$",
+  "address": { "@type": "PostalAddress", "addressLocality": "Belo Horizonte", "addressRegion": "MG", "addressCountry": "BR" },
+  "areaServed": [{% for b in info.bairros %}{ "@type": "Place", "name": {{ b | append: ", Belo Horizonte - MG" | jsonify }} }{% unless forloop.last %}, {% endunless %}{% endfor %}]{% if ig != "" %},
+  "sameAs": [{{ "https://instagram.com/" | append: ig | jsonify }}]{% endif %}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {%- assign primeiro = true -%}
+    {%- for q in info.faq -%}{%- assign r = q.resposta | default: "" | strip -%}{%- if r != "" -%}
+    {% unless primeiro %},{% endunless %}{ "@type": "Question", "name": {{ q.pergunta | jsonify }}, "acceptedAnswer": { "@type": "Answer", "text": {{ r | jsonify }} } }
+    {%- assign primeiro = false -%}
+    {%- endif -%}{%- endfor %}
+  ]
+}
+</script>

@@ -1,0 +1,27 @@
+---
+layout: default
+---
+{%- assign palavras = content | number_of_words -%}
+{%- assign minutos = palavras | divided_by: 200 | floor | plus: 1 -%}
+<article class="wrap artigo">
+  <a class="voltar" href="{{ '/blog/' | relative_url }}"><span aria-hidden="true">←</span> Todos os artigos</a>
+  <h1 class="fr">{{ page.title }}</h1>
+  <p class="artigo-meta">{% include data-pt.html date=page.date %} · {{ minutos }} min de leitura</p>
+  {%- if page.image %}
+  <figure class="artigo-capa"><img src="{{ page.image | relative_url }}" alt="" width="900" height="900"></figure>
+  {%- endif %}
+  <div class="conteudo">
+    {{ content }}
+  </div>
+  <aside class="autor" aria-label="Sobre o autor">
+    <img src="{{ '/assets/img/logo-roxo.webp' | relative_url }}" alt="">
+    <div>
+      <b class="fr">Nicolas Sá</b>
+      <p>Cat sitter em Belo Horizonte e graduando em Medicina Veterinária. Este texto é informativo e não substitui uma consulta com médico-veterinário.</p>
+    </div>
+  </aside>
+  <div class="post-cta">
+    <p>Vai viajar e quer alguém de confiança cuidando do seu gato?</p>
+    <a class="btn btn-whats" href="{% include wa.html msg='Oi Nicolas! Li um artigo no seu blog e quero saber sobre o cat sitting.' %}" target="_blank" rel="noopener">Falar no WhatsApp</a>
+  </div>
+</article>

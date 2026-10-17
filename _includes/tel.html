@@ -1,0 +1,4 @@
+{%- capture t -%}{%- include wa-num.html -%}{%- endcapture -%}
+{%- if t.size == 11 -%}({{ t | slice: 0, 2 }}) {{ t | slice: 2, 5 }}-{{ t | slice: 7, 4 }}
+{%- elsif t.size == 10 -%}({{ t | slice: 0, 2 }}) {{ t | slice: 2, 4 }}-{{ t | slice: 6, 4 }}
+{%- else -%}{{ t }}{%- endif -%}

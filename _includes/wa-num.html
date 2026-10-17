@@ -1,0 +1,3 @@
+{%- assign wa_num = site.data.info.whatsapp | default: "" | remove: " " | remove: "-" | remove: "(" | remove: ")" | remove: "+" | remove: "." -%}
+{%- if wa_num.size > 11 -%}{%- assign wa_num = wa_num | slice: 2, 20 -%}{%- endif -%}
+{{- wa_num -}}

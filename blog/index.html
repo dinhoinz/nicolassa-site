@@ -1,0 +1,31 @@
+---
+layout: default
+title: Blog
+description: Dicas de rotina, alimentação, caixa de areia e bem-estar para quem tem gato em Belo Horizonte.
+permalink: /blog/
+---
+<section class="wrap blog-topo">
+  <span class="eyebrow">Blog</span>
+  <h1 class="fr">Dicas para quem divide a casa com gato</h1>
+  <p>Rotina, alimentação, caixa de areia, viagens e bem-estar, escrito por um graduando em Medicina Veterinária que cuida de gatos em BH.</p>
+</section>
+<section class="band" style="padding-top:0">
+  <div class="wrap">
+    {%- if site.posts.size > 0 %}
+    <ul class="posts">
+      {%- for post in site.posts %}
+      {% include post-card.html post=post %}
+      {%- endfor %}
+    </ul>
+    {%- else %}
+    <div class="vazio">
+      <img src="{{ '/assets/img/peninha.webp' | relative_url }}" alt="" width="604" height="640">
+      <div>
+        <h2 class="fr">Os primeiros artigos estão chegando</h2>
+        <p>Enquanto isso, se tiver alguma dúvida sobre o seu gato, me chama no WhatsApp.</p>
+        <a class="btn btn-whats" href="{% include wa.html msg='Oi Nicolas! Tenho uma dúvida sobre meu gato.' %}" target="_blank" rel="noopener">Mandar uma dúvida</a>
+      </div>
+    </div>
+    {%- endif %}
+  </div>
+</section>

@@ -1,0 +1,51 @@
+# Configuração do site. Mudanças aqui exigem que o GitHub Pages refaça o build (automático a cada commit).
+title: Nicolas Sá
+tagline: Cat sitter em Belo Horizonte
+description: >-
+  Cat sitter em Belo Horizonte (Venda Nova e região): visitas com comida, água fresca,
+  caixa de areia limpa, brincadeira e fotos no WhatsApp, feitas por um graduando em Medicina Veterinária.
+url: "https://dinhoinz.github.io"  # produção: "https://nicolassa.com.br"
+baseurl: "/nicolassa-site"  # produção: ""
+lang: pt_BR
+timezone: America/Sao_Paulo
+
+logo: /assets/img/logo-roxo.png
+image: /assets/img/og-image.jpg
+author:
+  name: Nicolas Sá
+social:
+  name: Nicolas Sá
+  links:
+    - https://instagram.com/nicolassa.vet
+
+permalink: /blog/:title/
+markdown: kramdown
+kramdown:
+  input: GFM
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+feed:
+  path: blog/feed.xml
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: pages
+    values:
+      image: /assets/img/og-image.jpg
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - node_modules

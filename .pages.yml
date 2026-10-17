@@ -1,0 +1,93 @@
+# Configuração do Pages CMS (https://app.pagescms.org).
+# Define o que o Nicolas vê e edita no painel. Documentação: https://pagescms.org/docs/configuration/
+
+media:
+  input: assets/blog
+  output: /assets/blog
+
+content:
+  - name: posts
+    label: Blog
+    type: collection
+    path: _posts
+    filename: "{year}-{month}-{day}-{primary}.md"
+    view:
+      primary: title
+      fields: [title, date, published]
+      sort: date
+      order: desc
+    fields:
+      - name: title
+        label: Título do artigo
+        type: string
+        required: true
+      - name: description
+        label: Resumo (aparece no Google e na lista do blog)
+        type: text
+      - name: date
+        label: Data
+        type: date
+        required: true
+      - name: image
+        label: Imagem de capa
+        type: image
+      - name: published
+        label: Publicado (desmarque para salvar como rascunho)
+        type: boolean
+        default: true
+      - name: body
+        label: Texto
+        type: rich-text
+        options:
+          format: markdown
+
+  - name: info
+    label: Informações do site
+    type: file
+    path: _data/info.yml
+    fields:
+      - name: whatsapp
+        label: "WhatsApp com DDD (ex.: 31 99999-9999)"
+        type: string
+        required: true
+      - name: instagram
+        label: Instagram (sem o @)
+        type: string
+      - name: regioes
+        label: Frase sobre a região atendida (aparece no topo)
+        type: text
+      - name: bairros
+        label: Bairros atendidos
+        type: string
+        list: true
+      - name: bairros_obs
+        label: Observação abaixo dos bairros
+        type: string
+      - name: precos
+        label: "Preços (só números; vazio mostra Consulte)"
+        type: object
+        fields:
+          - { name: visita, label: Visita avulsa (R$), type: string }
+          - { name: duracao, label: Duração da visita (minutos), type: string }
+          - { name: gatos, label: Gatos inclusos na visita, type: string }
+          - { name: pacote, label: Pacote viagem (R$), type: string }
+          - { name: pacote_visitas, label: Visitas no pacote, type: string }
+          - { name: gato_extra, label: Gato extra (R$), type: string }
+          - { name: medicacao, label: Medicação (R$), type: string }
+          - { name: segunda_visita, label: 2ª visita no mesmo dia (R$), type: string }
+      - name: faculdade
+        label: Faculdade
+        type: string
+      - name: loja
+        label: Loja parceira
+        type: string
+      - name: foto
+        label: Sua foto com um gato (formato retrato)
+        type: image
+      - name: faq
+        label: Perguntas frequentes (resposta vazia não aparece no site)
+        type: object
+        list: true
+        fields:
+          - { name: pergunta, label: Pergunta, type: string }
+          - { name: resposta, label: Resposta, type: text }

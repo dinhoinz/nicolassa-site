@@ -1,0 +1,2 @@
+{%- capture wa_digits -%}{%- include wa-num.html -%}{%- endcapture -%}
+https://wa.me/55{{ wa_digits }}{% if include.msg %}?text={{ include.msg | url_encode }}{% endif %}

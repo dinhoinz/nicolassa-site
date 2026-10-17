@@ -1,0 +1,19 @@
+<footer>
+  <div class="wrap">
+    <div class="f-col">
+      <img class="f-logo" src="{{ '/assets/img/logo-branco.webp' | relative_url }}" width="64" height="64" alt="">
+      <span class="f-nome fr">Nicolas Sá</span>
+      <span>Cat sitter em Belo Horizonte · Vet em formação</span>
+      <span class="f-aviso">As orientações dadas aqui não substituem uma consulta com médico-veterinário.</span>
+    </div>
+    <div class="f-col">
+      <a href="{% include wa.html %}" target="_blank" rel="noopener">WhatsApp {% include tel.html %}</a>
+      {%- if site.data.info.instagram and site.data.info.instagram != "" %}
+      {%- assign ig = site.data.info.instagram | remove: "@" | strip %}
+      <a href="https://instagram.com/{{ ig }}" target="_blank" rel="noopener">Instagram @{{ ig }}</a>
+      {%- endif %}
+      <a href="{{ '/blog/' | relative_url }}">Blog</a>
+      <span>Belo Horizonte, MG</span>
+    </div>
+  </div>
+</footer>

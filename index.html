@@ -1,0 +1,213 @@
+---
+layout: default
+---
+{%- assign info = site.data.info -%}
+{%- assign p = info.precos -%}
+{%- assign visita = p.visita | default: "" | strip -%}
+{%- assign duracao = p.duracao | default: "" | strip -%}
+{%- assign gatos = p.gatos | default: "" | strip -%}
+{%- assign pacote = p.pacote | default: "" | strip -%}
+{%- assign pacote_visitas = p.pacote_visitas | default: "" | strip -%}
+{%- assign gato_extra = p.gato_extra | default: "" | strip -%}
+{%- assign medicacao = p.medicacao | default: "" | strip -%}
+{%- assign segunda = p.segunda_visita | default: "" | strip -%}
+{%- assign faculdade = info.faculdade | default: "" | strip -%}
+{%- assign loja = info.loja | default: "" | strip -%}
+{%- assign foto = info.foto | default: "" | strip -%}
+
+<section id="topo" class="hero lilas">
+  <div class="wrap">
+    <div class="hero-txt">
+      <span class="chip">Cat sitter em Belo Horizonte</span>
+      <h1 class="fr">Seu gato em casa, bem cuidado, enquanto você viaja.</h1>
+      <p class="hero-lead">Visitas com comida, água fresca, caixa de areia limpa, brincadeira e fotos no seu WhatsApp. Feitas por um graduando em Medicina Veterinária que entende de gato.</p>
+      <div class="ctas">
+        <a class="btn btn-whats" href="{% include wa.html msg='Oi Nicolas! Vim pelo site e quero agendar o cat sitting.' %}" target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
+        <a class="btn btn-outline" href="#como-funciona">Como funciona</a>
+      </div>
+      {%- if info.regioes and info.regioes != "" %}
+      <p class="nota">{{ info.regioes }}</p>
+      {%- endif %}
+    </div>
+    <div class="hero-art">
+      <div class="circulo">
+        <img src="{{ '/assets/img/gata.webp' | relative_url }}" width="520" height="480" alt="Ilustração de uma gata tricolor sentada, com a pata levantada">
+        <div class="balao" aria-hidden="true">
+          <span class="balao-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg></span>
+          <span><b>Foto da visita · 18:40</b><span>Comeu tudo e já tá na janela.</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="selos" aria-label="Diferenciais">
+  <div class="wrap">
+    <div class="selo"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-5 9 5-9 5z"/><path d="M7 11.5V16c0 1.5 2.2 3 5 3s5-1.5 5-3v-4.5"/></svg>Graduando em Medicina Veterinária</div>
+    <div class="selo"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14h16l-1.5 5h-13z"/><path d="M7 14c0-3 2.2-5 5-5s5 2 5 5"/></svg>Experiência com nutrição e produtos pet</div>
+    <div class="selo"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Fotos e relato em toda visita</div>
+  </div>
+</section>
+
+<section id="como-funciona" class="band">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Como funciona</span>
+      <h2 class="h2">Três passos e você viaja tranquilo</h2>
+    </div>
+    <ol class="passos">
+      <li class="passo"><div class="passo-topo"><span class="passo-n fr" aria-hidden="true">1</span><img class="passo-img" src="{{ '/assets/img/oi-sticker.webp' | relative_url }}" width="584" height="640" alt="" loading="lazy"></div><h3>Me chama no WhatsApp</h3><p>Conta as datas da viagem, quantos gatos são e como é a rotina deles.</p></li>
+      <li class="passo"><div class="passo-topo"><span class="passo-n fr" aria-hidden="true">2</span><img class="passo-img" src="{{ '/assets/img/joinha.webp' | relative_url }}" width="514" height="640" alt="" loading="lazy"></div><h3>Visita de apresentação</h3><p>Antes da viagem eu conheço seu gato, combino a entrega da chave e anoto tudo: horários, manias e remédios.</p></li>
+      <li class="passo"><div class="passo-topo"><span class="passo-n fr" aria-hidden="true">3</span><img class="passo-img" src="{{ '/assets/img/mala.webp' | relative_url }}" width="594" height="640" alt="" loading="lazy"></div><h3>Você viaja tranquilo</h3><p>Em cada visita chegam fotos e um resumo de como seu gato está: apetite, xixi, cocô e humor.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="band lilas-claro" aria-labelledby="inclui-titulo">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Em cada visita</span>
+      <h2 id="inclui-titulo" class="h2">Tudo o que seu gato precisa, no território dele</h2>
+    </div>
+    <div class="inclui">
+      <div class="item"><div class="item-arte"><img src="{{ '/assets/img/racao.webp' | relative_url }}" width="565" height="640" alt="" loading="lazy"></div><div><h3>Comida e água fresca</h3><p>Seguindo a dieta e os horários que você passar, com potes lavados e água trocada.</p></div></div>
+      <div class="item"><div class="item-arte"><img src="{{ '/assets/img/espanador.webp' | relative_url }}" width="620" height="640" alt="" loading="lazy"></div><div><h3>Caixa de areia limpa</h3><p>Limpeza em toda visita e reposição de areia quando precisar.</p></div></div>
+      <div class="item"><div class="item-arte"><img src="{{ '/assets/img/peninha.webp' | relative_url }}" width="604" height="640" alt="" loading="lazy"></div><div><h3>Brincadeira</h3><p>Varinha, peninha e bolinha para gastar energia e matar a saudade.</p></div></div>
+      <div class="item"><div class="item-arte"><img src="{{ '/assets/img/colirio.webp' | relative_url }}" width="565" height="640" alt="" loading="lazy"></div><div><h3>Medicação prescrita</h3><p>Dou os remédios receitados pelo veterinário do seu gato, no horário certo.</p></div></div>
+      <div class="item"><div class="item-arte"><img src="{{ '/assets/img/oi.webp' | relative_url }}" width="439" height="640" alt="" loading="lazy"></div><div><h3>Carinho e companhia</h3><p>No ritmo do seu gato, inclusive dos mais tímidos.</p></div></div>
+      <div class="item"><div class="item-arte"><img src="{{ '/assets/img/pulo2.webp' | relative_url }}" width="527" height="640" alt="" loading="lazy"></div><div><h3>Fotos e relato</h3><p>Você acompanha tudo pelo WhatsApp, visita a visita.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="precos" class="band">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Preços</span>
+      <h2 class="h2">Simples e sem surpresa</h2>
+    </div>
+    <div class="precos">
+      <div class="plano">
+        <h3>Visita avulsa</h3>
+        <div class="valor">{% if visita != "" %}<span class="fr">R$ {{ visita }}</span><span>/ visita</span>{% else %}<span class="fr">Consulte</span>{% endif %}</div>
+        <p>{% if gatos != "" or duracao != "" %}{% if gatos != "" %}Até {{ gatos }} gato(s){% else %}Visita completa{% endif %}{% if duracao != "" %}, cerca de {{ duracao }} minutos{% endif %}.{% else %}Comida, água, areia, brincadeira e fotos em toda visita.{% endif %}</p>
+      </div>
+      <div class="plano plano-dest">
+        <div class="plano-topo"><h3>Pacote viagem</h3><span class="tag">Mais pedido</span></div>
+        <div class="valor">{% if pacote != "" %}<span class="fr">R$ {{ pacote }}</span>{% if pacote_visitas != "" %}<span>/ {{ pacote_visitas }} visitas</span>{% endif %}{% else %}<span class="fr">Consulte</span>{% endif %}</div>
+        <p>{% if pacote_visitas != "" %}A partir de {{ pacote_visitas }} visitas, com desconto.{% else %}Desconto para viagens mais longas.{% endif %} Ideal para feriados e férias.</p>
+      </div>
+      <div class="plano">
+        <h3>Adicionais</h3>
+        <div class="linha"><span>Gato extra</span><strong>{% if gato_extra != "" %}+ R$ {{ gato_extra }}{% else %}Consulte{% endif %}</strong></div>
+        <div class="linha"><span>Medicação</span><strong>{% if medicacao != "" %}+ R$ {{ medicacao }}{% else %}Consulte{% endif %}</strong></div>
+        <div class="linha"><span>2ª visita no mesmo dia</span><strong>{% if segunda != "" %}+ R$ {{ segunda }}{% else %}Consulte{% endif %}</strong></div>
+      </div>
+    </div>
+    <p class="rodape-sec">Fora da região de atendimento, me chama que a gente combina.</p>
+  </div>
+</section>
+
+<section id="produtos" class="band produtos">
+  <div class="wrap">
+    <div class="produtos-txt">
+      <span class="eyebrow">Produtos com entrega em BH</span>
+      <h2 class="h2">Acabou a ração ou a areia? Eu resolvo.</h2>
+      <p>Trabalho com {% if loja != "" %}a {{ loja }}, {% endif %}loja completa de produtos pet. Faço seu pedido e levo na próxima visita, ou a loja entrega no seu endereço.</p>
+      <ul class="pilulas">
+        <li>Rações secas e úmidas</li>
+        <li>Areias e granulados</li>
+        <li>Medicamentos</li>
+        <li>Petiscos</li>
+        <li>Arranhadores</li>
+        <li>Brinquedos e acessórios</li>
+      </ul>
+      <a class="btn btn-branco" href="{% include wa.html msg='Oi Nicolas! Quero fazer um pedido de produtos.' %}" target="_blank" rel="noopener">Fazer um pedido</a>
+    </div>
+    <figure class="produtos-arte">
+      <img src="{{ '/assets/img/cena-alimento.webp' | relative_url }}" width="900" height="900" alt="Ilustração da gata tricolor servindo ração, com potes de comida e água e a areia ao lado" loading="lazy">
+    </figure>
+  </div>
+</section>
+
+<section class="band sobre" aria-labelledby="sobre-titulo">
+  <div class="wrap">
+    <div class="foto tem-foto">
+      {%- if foto != "" %}
+      <img src="{{ foto | relative_url }}" alt="Nicolas Sá com um gato" loading="lazy">
+      {%- else %}
+      <img src="{{ '/assets/img/cena-cuidado.webp' | relative_url }}" width="900" height="900" alt="Ilustração da gata tricolor cuidando de um gatinho que dorme na caminha" loading="lazy">
+      {%- endif %}
+    </div>
+    <div class="sobre-txt">
+      <span class="eyebrow">Quem cuida</span>
+      <h2 id="sobre-titulo" class="h2">Oi, eu sou o Nicolas.</h2>
+      <p>Sou graduando em Medicina Veterinária{% if faculdade != "" %} na {{ faculdade }}{% endif %} e trabalho com nutrição e produtos pet aqui em BH. Comecei o cat sitting porque gato sofre com mudança: em casa, no território dele e com alguém que sabe ler os sinais, a viagem fica tranquila para os dois lados.</p>
+      <div class="duvidas-box">
+        <h3>Dúvidas sobre o seu gato?</h3>
+        <p>Rotina, alimentação, caixa de areia, adaptação de um novo pet: me manda uma mensagem que eu te ajudo. Quando for caso de consulta, eu te digo e indico procurar um veterinário.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band lilas-claro" aria-labelledby="bairros-titulo">
+  <div class="wrap">
+    <div class="head" style="margin-bottom:24px">
+      <h2 id="bairros-titulo" class="h2">Onde eu atendo em Belo Horizonte</h2>
+    </div>
+    <ul class="bairros">
+      {%- for b in info.bairros %}
+      <li>{{ b }}</li>
+      {%- endfor %}
+    </ul>
+    <p class="rodape-sec">{% if info.bairros_obs and info.bairros_obs != "" %}{{ info.bairros_obs }} {% endif %}Não achou o seu? Me chama que a gente vê.</p>
+  </div>
+</section>
+
+{%- if site.posts.size > 0 %}
+<section class="band" aria-labelledby="blog-titulo">
+  <div class="wrap">
+    <div class="blog-home">
+      <div class="head">
+        <span class="eyebrow">Do blog</span>
+        <h2 id="blog-titulo" class="h2">Dicas para quem tem gato</h2>
+      </div>
+      <a class="btn btn-outline" href="{{ '/blog/' | relative_url }}">Ver todos os artigos</a>
+    </div>
+    <ul class="posts">
+      {%- for post in site.posts limit: 3 %}
+      {% include post-card.html post=post %}
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+{%- endif %}
+
+<section id="duvidas" class="band">
+  <div class="wrap faq">
+    <div class="head">
+      <span class="eyebrow">Perguntas frequentes</span>
+      <h2 class="h2">Ficou alguma dúvida?</h2>
+    </div>
+    <div class="faq-lista">
+      {%- for q in info.faq %}
+      {%- assign r = q.resposta | default: "" | strip %}
+      {%- if r != "" %}
+      <details><summary>{{ q.pergunta }}<span class="mais" aria-hidden="true">+</span></summary><p>{{ r }}</p></details>
+      {%- endif %}
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="band cta" aria-labelledby="cta-titulo">
+  <div class="wrap">
+    <div class="cta-card">
+      <img class="cta-img" src="{{ '/assets/img/viagem.webp' | relative_url }}" width="550" height="640" alt="" loading="lazy">
+      <h2 id="cta-titulo" class="fr">Vai viajar? Garanta as suas datas.</h2>
+      <p>Feriado e férias lotam rápido. Me chama no WhatsApp e já marcamos a visita de apresentação.</p>
+      <a class="btn btn-whats" href="{% include wa.html msg='Oi Nicolas! Vou viajar e quero reservar datas.' %}" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,46 @@
+# Informações da landing page. O Nicolas edita isto pelo Pages CMS ("Informações do site").
+# Campo vazio = o site mostra uma alternativa (ex.: preço vazio vira "Consulte").
+
+whatsapp: "31 9506-3704"
+instagram: "nicolassa.vet"
+regioes: "Atendo Venda Nova e outras regiões de Belo Horizonte com acesso por metrô ou ônibus."
+bairros:
+  - Venda Nova
+  - Céu Azul
+  - Santa Mônica
+  - Rio Branco
+  - Mantiqueira
+  - Planalto
+  - Itapoã
+  - Santa Amélia
+  - Pampulha
+  - Centro
+bairros_obs: "E demais bairros com acesso fácil por transporte público."
+
+precos:
+  visita: ""
+  duracao: ""
+  gatos: ""
+  pacote: ""
+  pacote_visitas: ""
+  gato_extra: ""
+  medicacao: ""
+  segunda_visita: ""
+
+faculdade: "Una Linha Verde"
+loja: "Empire Pet Venda Nova"
+foto: ""
+
+faq:
+  - pergunta: "Como fica a chave da minha casa?"
+    resposta: "Combinamos na visita de apresentação: você me entrega pessoalmente, deixa na portaria ou com alguém de confiança. No fim, devolvo do mesmo jeito."
+  - pergunta: "Quantas visitas por dia meu gato precisa?"
+    resposta: "Para a maioria dos gatos adultos e saudáveis, uma por dia basta. Filhotes, idosos ou gatos com medicação podem precisar de duas. A gente define junto."
+  - pergunta: "Meu gato é arisco. Tem problema?"
+    resposta: "Nenhum. Respeito o tempo dele e não forço contato. Mesmo que ele passe a visita escondido, comida, água e caixa ficam em dia, e eu te conto o que observei."
+  - pergunta: "E se acontecer alguma emergência?"
+    resposta: "Te aviso na hora e levo ao veterinário que você indicar, ou a uma clínica 24h próxima, conforme combinado antes da viagem."
+  - pergunta: "Você cuida de cachorro também?"
+    resposta: "Sim! Se você tem gatos e cachorros na mesma casa, posso incluir os cuidados com seu cão durante as visitas. No entanto, meu atendimento é voltado exclusivamente para lares com gatos, por isso não atendo residências que tenham apenas cachorros."
+  - pergunta: "Como é o pagamento?"
+    resposta: ""

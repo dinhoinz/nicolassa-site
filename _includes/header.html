@@ -1,0 +1,22 @@
+<header class="topo">
+  <div class="wrap">
+    <a class="marca" href="{{ '/' | relative_url }}" aria-label="Nicolas Sá, página inicial">
+      <img class="marca-logo" src="{{ '/assets/img/logo-roxo.webp' | relative_url }}" width="52" height="52" alt="">
+      <span class="marca-txt">
+        <span class="marca-nome fr">Nicolas Sá</span>
+        <span class="marca-sub">Vet em formação · Cat sitter</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Seções">
+      <a href="{{ '/' | relative_url }}#como-funciona">Como funciona</a>
+      <a href="{{ '/' | relative_url }}#precos">Preços</a>
+      <a href="{{ '/' | relative_url }}#produtos">Produtos</a>
+      <a href="{{ '/blog/' | relative_url }}"{% if page.url contains '/blog/' %} aria-current="page"{% endif %}>Blog</a>
+      <a href="{{ '/' | relative_url }}#duvidas">Dúvidas</a>
+    </nav>
+    <a class="btn btn-whats" href="{% include wa.html msg='Oi Nicolas! Vim pelo site e quero saber sobre o cat sitting.' %}" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+      <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.5A8.4 8.4 0 1 1 21 11.5z"/></svg>
+      <span>WhatsApp</span>
+    </a>
+  </div>
+</header>
